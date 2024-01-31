@@ -1,3 +1,7 @@
+clone:
+
+git clone https://github.com/ofekido/gradeCalculator.git
+
 express opening:
 
 npm install mongodb@4.1.0 --save
