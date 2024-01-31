@@ -1,17 +1,11 @@
-mongodb+srv://admin:56oUQZ7BYDh0LkKy@gradecalculator.qfbqzzi.mongodb.net/?retryWrites=true&w=majority
-gradesappdb
+express opening:
 
-express:
-
-npm init -y
-npm install express --save
-npm install cors
 npm install mongodb@4.1.0 --save
 npm install multer --save
 
-react:
+node index.js
 
-npx create-react-app gradecalculatorapp
+react:
 
 > > > > npm start
 
