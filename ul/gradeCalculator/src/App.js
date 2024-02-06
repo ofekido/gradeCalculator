@@ -1,9 +1,10 @@
 // App.js
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './App.css';
-import './styles.css';
-import AverageGrade from './AverageGrade';
+import Header from './Header'; // Import the Header component
+import Footer from './Footer'; // Import the Footer component
+import './App.css'; // Import the CSS file with table styles
+import './styles.css'; // Import additional styles
+import './Header.css';
 
 class App extends Component {
     constructor(props) {
@@ -21,6 +22,7 @@ class App extends Component {
     componentDidMount() {
         this.refreshGrades();
     }
+
     async deleteGrade(id) {
         fetch(`http://localhost:5038/api/gradesapp/DeleteGrade/${id}`, {
             method: "DELETE"
@@ -42,37 +44,28 @@ class App extends Component {
 
     async addGrade() {
         const { studentName, profession, grade } = this.state;
-        //ensure that only letetrs are entered for student name and profession
+        //ensure that only letters are entered for student name and profession
         const nameProfessionRegex = /^[a-z\s]+$/;
 
-        
-        //ensure that all fields are filled(so i dont throw other errors)
+        //ensure that all fields are filled (so we don't throw other errors)
         if (!studentName || !profession || !grade) {
             alert("Error: Please fill in all fields.");
-        return
-            
+            return;
         }
 
         if (!nameProfessionRegex.test(studentName) || !nameProfessionRegex.test(profession)) {
             alert("Error: Please enter only letters for Student Name and Profession.");
-        return
-            
+            return;
         }
 
         if (studentName.length > 30 || profession.length > 30) {
             alert("Error: Student Name and Profession must be 30 characters or fewer.");
-        return
-            
+            return;
         }
-    
+
         if (grade >= 60 && grade <= 100) {
             const data = { studentName, profession, grade };
-        
 
-           
-
-        
-    
             fetch("http://localhost:5038/api/gradesapp/AddGrade", {
                 method: "POST",
                 headers: {
@@ -86,7 +79,6 @@ class App extends Component {
                 this.refreshGrades();
             });
         } else {
-            
             alert("Error: Grade must be between 60 and 100 (inclusive).");
         }
     }
@@ -103,10 +95,9 @@ class App extends Component {
         })
         .then(response => response.json())
         .then(result => {
-            //clip the decimal avg value to two points
+            //clip the decimal average value to two points
             const formattedAverageGrade = result.averageGrade.toFixed(2);
             window.location.href = `/average-grade?averageGrade=${formattedAverageGrade}`;
-            
         })
         .catch(error => {
             console.error("Error calculating average grade:", error);
@@ -121,6 +112,7 @@ class App extends Component {
 
         return (
             <div className="App">
+                <Header /> {/* Include the Header component */}
                 <h2>Calculating Your Grades</h2>
                 <div>
                     <input
@@ -135,18 +127,18 @@ class App extends Component {
                         value={profession}
                         onChange={e => this.setState({ profession: e.target.value.slice(0, 30) })}
                     />
-                   <input
-                     type="text"  
-                     placeholder="Grade"
-                     value={grade}
-                     onChange={e => {
-                         const input = e.target.value;
-                         const regex = /^\d+(\.\d{0,2})?$/; 
-                         if (input === '' || regex.test(input)) {
-                             this.setState({ grade: input });
-                         }
-                     }}
-                 />
+                    <input
+                        type="text"  
+                        placeholder="Grade"
+                        value={grade}
+                        onChange={e => {
+                            const input = e.target.value;
+                            const regex = /^\d+(\.\d{0,2})?$/; 
+                            if (input === '' || regex.test(input)) {
+                                this.setState({ grade: input });
+                            }
+                        }}
+                    />
                     <button onClick={() => this.addGrade()}>Add Grade</button>
                 </div>
                 <div>
@@ -156,14 +148,30 @@ class App extends Component {
                     </select>
                     <button onClick={() => this.calculateGrade()}>Calculate</button>
                 </div>
-                <ul>
-                    {grades.map(grade => (
-                        <li key={grade._id}>
-                            <b>Student Name:</b> {grade.studentName}, <b>Profession:</b> {grade.profession}, <b>Grade:</b> {grade.grade}
-                            <button onClick={() => this.deleteGrade(grade._id)}>Delete Grade</button>
-                        </li>
-                    ))}
-                </ul>
+                {/* Table to display grades */}
+                <table className="grades-table">
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Profession</th>
+                            <th>Grade</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {grades.map((grade, index) => (
+                            <tr key={index}>
+                                <td>{grade.studentName}</td>
+                                <td>{grade.profession}</td>
+                                <td>{grade.grade}</td>
+                                <td>
+                                    <button onClick={() => this.deleteGrade(grade._id)}>Delete</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                <Footer /> {/* Include the Footer component */}
             </div>
         );
     }

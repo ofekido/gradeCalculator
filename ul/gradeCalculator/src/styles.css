@@ -1,18 +1,58 @@
+/* styles.css */
 
+/* Set body styles */
 body {
-    background-color: #afe1c2; /* Green color */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    font-family: 'Arial', sans-serif; /* Set a default font */
-  }
-  
-  .App {
-    text-align: center;
-  }
-  
-  h2 {
-    color: #ffffff; /* White text color */
-  }
-  
-  /* Add any additional styling as needed */
-  
+  background-color: #afe1c2; /* Green color */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  font-family: 'Arial', sans-serif; /* Set a default font */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure that the body takes up at least the full viewport height */
+}
+
+/* Style for the main content area */
+.App {
+  text-align: center;
+  flex: 1; /* Make the main content area flexible to fill remaining space */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+/* Styles for the container of average grade page */
+.average-grade-container {
+  flex: 1; /* Make the container flexible to fill remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for the content area */
+.content {
+  flex: 1; /* Make the content area flexible to fill remaining space */
+  text-align: center;
+  padding: 20px;
+}
+
+/* Styles for h2 */
+h2 {
+  color: #ffffff; /* White text color */
+}
+
+/* Styles for the table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black; /* Black border around the table */
+}
+
+/* Styles for table cells */
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid black; /* Black border for table cells */
+  background-color: #fffdd0; /* Cream-colored background for table cells */
+}
+
+/* Styles for table header cells */
+th {
+  background-color: #f5deb3; /* Lighter cream-colored background for table header cells */
+}
