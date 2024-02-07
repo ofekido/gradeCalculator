@@ -80,3 +80,11 @@ app.post('/api/gradesapp/CalculateAverageGrade', (request, response) => {
         }
     });
 });
+
+// Route to handle displaying average grade
+app.get('/average-grade', (req, res) => {
+    // Handle the request here, render the component or perform calculations
+    // Return appropriate response or render a template
+});
+
+module.exports = app; // Export the app for testing or for use in other modules
