@@ -24,7 +24,7 @@ class App extends Component {
     }
 
     async deleteGrade(id) {
-        fetch(`http://localhost:5038/api/gradesapp/DeleteGrade/${id}`, {
+        fetch(`https://gradecalculatorapi2.onrender.com/api/gradesapp/DeleteGrade/${id}`, {
             method: "DELETE"
         })
         .then(response => response.json())
@@ -35,7 +35,7 @@ class App extends Component {
     }
 
     async refreshGrades() {
-        fetch("http://localhost:5038/api/gradesapp/GetGrades")
+        fetch("https://gradecalculatorapi2.onrender.com/api/gradesapp/GetGrades")
             .then(response => response.json())
             .then(data => {
                 this.setState({ grades: data });
@@ -64,7 +64,7 @@ class App extends Component {
         if (grade >= 60 && grade <= 100) {
             const data = { studentName, profession, grade };
 
-            fetch("http://localhost:5038/api/gradesapp/AddGrade", {
+            fetch("https://gradecalculatorapi2.onrender.com/api/gradesapp/AddGrade", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -84,7 +84,7 @@ class App extends Component {
     async calculateGrade() {
         const { selectedStudent } = this.state;
 
-        fetch("http://localhost:5038/api/gradesapp/CalculateAverageGrade", {
+        fetch("https://gradecalculatorapi2.onrender.com/api/gradesapp/CalculateAverageGrade", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
