@@ -33,6 +33,13 @@ body {
   text-align: center;
 }
 
+/* styles.css */
+
+/* Add styles to increase text size inside the content container */
+.content p {
+  font-size: 45px; /* Set the desired font size */
+}
+
 /* Styles for h2 */
 h2 {
   color: #ffffff; /* White text color */
