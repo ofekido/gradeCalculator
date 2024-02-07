@@ -1,30 +1,59 @@
-clone:
+# Grade Calculator App
 
-git clone https://github.com/ofekido/gradeCalculator.git
+The Grade Calculator App is a web application built using Express.js, React, and MongoDB. It allows users to manage and calculate grades for students.
 
-Install Node.js:
+## Features
 
-Download and install Node.js from https://nodejs.org/.
-Open Terminal or Command Prompt: Navigate to Your Project Directory: cd path/to/your/project
+- Add, delete, and view grades for students.
+- Calculate average grade for a selected student.
 
+## Technologies Used
 
-Install Project Dependencies: Run the following command to install the necessary dependencies for your project using npm. npm install
+- Express.js
+- React
+- MongoDB
 
+## Installation
 
-Start the Project: After the installation is complete, you can start your project using the appropriate command (e.g., npm start).
+1. **Clone the repository:**
 
-To connect to the databse enter the api folder(inside the project directory) and write : node index.js
+   ```bash
+   git clone https://github.com/ofekido/gradeCalculator.git
+   Install dependencies for the server:
+   ```
 
+cd ../api
+npm install
+Install dependencies for the client:
 
-express opening:
+cd ../gradeCalculator
+npm install
+Set up MongoDB Atlas:
 
-npm install mongodb@4.1.0 --save
-npm install multer --save
+Create a MongoDB Atlas cluster.
+Replace the CONNECTION_STRING in index.js with your MongoDB connection string.
+Deployment on render.com
+Create an account on render.com if you haven't already:
 
-node index.js
+Sign up at https://render.com
 
-react:
+Deploy the server:
 
-> > > > npm start
+Navigate to your render.com dashboard and create a new web service.
+Choose your GitHub repository and select the branch you want to deploy.
+Set the environment variables, including the MongoDB connection string.
+Deploy the service.
+Deploy the client:
 
-terminal >>> npm install react-router-dom
+Follow the same steps as above, but deploy the client directory instead.
+Set the environment variable REACT_APP_API_URL to the URL of your server deployed on render.com.
+Usage
+Add new grades by entering student name, profession, and grade in the input fields and clicking the "Add Grade" button.
+Delete grades by clicking the "Delete" button next to the grade.
+Calculate the average grade for a selected student by choosing the student from the dropdown menu and clicking the "Calculate" button.
+Contributing
+Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
+Acknowledgments
+Thanks to MongoDB for providing the database infrastructure.
+Thanks to React and Express.js for the frontend and backend frameworks.
