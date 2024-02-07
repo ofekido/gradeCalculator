@@ -1,10 +1,8 @@
-// AverageGrade.js
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
-import './styles.css'; // Import the main styles.css file
-import './AverageGrade.css'; // Import the new AverageGrade.css file
+import './styles.css';
+import './AverageGrade.css';
 import averageFormula from './Average-Formula.jpg';
 
 const AverageGrade = () => {
