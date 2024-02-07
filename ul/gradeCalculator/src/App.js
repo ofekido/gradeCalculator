@@ -1,9 +1,9 @@
 // App.js
 import React, { Component } from 'react';
-import Header from './Header'; // Import the Header component
-import Footer from './Footer'; // Import the Footer component
-import './App.css'; // Import the CSS file with table styles
-import './styles.css'; // Import additional styles
+import Header from './Header';
+import Footer from './Footer';
+import './App.css';
+import './styles.css';
 import './Header.css';
 
 class App extends Component {
@@ -44,10 +44,8 @@ class App extends Component {
 
     async addGrade() {
         const { studentName, profession, grade } = this.state;
-        //ensure that only letters are entered for student name and profession
         const nameProfessionRegex = /^[a-z\s]+$/;
 
-        //ensure that all fields are filled (so we don't throw other errors)
         if (!studentName || !profession || !grade) {
             alert("Error: Please fill in all fields.");
             return;
@@ -95,9 +93,8 @@ class App extends Component {
         })
         .then(response => response.json())
         .then(result => {
-            //clip the decimal average value to two points
             const formattedAverageGrade = result.averageGrade.toFixed(2);
-            window.location.href = `/average-grade?averageGrade=${formattedAverageGrade}`;
+            window.location.href = `/average-grade?averageGrade=${formattedAverageGrade}&selectedStudent=${selectedStudent}`;
         })
         .catch(error => {
             console.error("Error calculating average grade:", error);
@@ -107,12 +104,11 @@ class App extends Component {
 
     render() {
         const { grades, studentName, profession, grade, selectedStudent } = this.state;
-
         const studentNames = [...new Set(grades.map(grade => grade.studentName))];
 
         return (
             <div className="App">
-                <Header /> {/* Include the Header component */}
+                <Header />
                 <h2>Calculating Your Grades</h2>
                 <div>
                     <input
@@ -141,7 +137,6 @@ class App extends Component {
                     />
                     <button onClick={() => this.addGrade()}>Add Grade</button>
                 </div>
-                {/* Add a space between the table and the dropdown */}
                 <div style={{ marginBottom: '20px' }}></div>
                 <div>
                     <select value={selectedStudent} onChange={e => this.setState({ selectedStudent: e.target.value })}>
@@ -150,9 +145,7 @@ class App extends Component {
                     </select>
                     <button onClick={() => this.calculateGrade()}>Calculate</button>
                 </div>
-                {/* Apply the table-container class to the wrapping div */}
                 <div className="table-container">
-                    {/* Table to display grades */}
                     <table className="grades-table">
                         <thead>
                             <tr>
@@ -176,7 +169,7 @@ class App extends Component {
                         </tbody>
                     </table>
                 </div>
-                <Footer /> {/* Include the Footer component */}
+                <Footer />
             </div>
         );
     }

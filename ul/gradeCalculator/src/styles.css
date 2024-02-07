@@ -2,7 +2,7 @@
 
 /* Set body styles */
 body {
-  background-color: #99eedf; /* Green color */
+  background-color: #99eedf; 
   margin: 0;
   padding: 0;
   font-family: 'Arial', sans-serif;
@@ -31,7 +31,7 @@ input[type="number"] {
 input[type="text"]:focus,
 input[type="number"]:focus {
     outline: none;
-    border-color: #008970; /* Blue color */
+    border-color: #008970; 
 }
 
 .error-message {
@@ -45,14 +45,14 @@ button {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #008970  ; /* Blue color */
+  background-color: #008970  ; 
   color: white;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
 
 button:hover {
-  background-color: #008970  ; /* Darker blue color on hover */
+  background-color: #008970  ; 
 }
 
 /* Button icon styles */
@@ -90,7 +90,7 @@ h2 {
 .table-container {
   max-height: 400px;
   overflow-y: auto;
-  border: 2px solid #008970; /* Blue color */
+  border: 2px solid #008970; 
   border-radius: 10px;
   padding: 10px;
   margin-top: 20px; /* Add margin-top to move the table down */
@@ -116,7 +116,7 @@ td {
 
 /* Styles for table header cells */
 th {
-  background-color: #008970; /* Blue color */
+  background-color: #008970; 
   color: white;
 }
 

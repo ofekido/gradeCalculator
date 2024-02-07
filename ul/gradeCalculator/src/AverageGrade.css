@@ -1,0 +1,71 @@
+/* AverageGrade.css */
+
+/* Container styles */
+.average-grade-container {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+  
+  /* Content styles */
+  .content {
+    text-align: center;
+  }
+  
+  /* Header styles */
+  .content h2 {
+    color: #008970; /* Green header color */
+    margin-bottom: 20px; /* Add space below the header */
+  }
+  
+  /* Back button styles */
+  .back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008970; /* Green background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .back-link:hover {
+    background-color: #005c4a; /* Darker green on hover */
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #008970; /* Dark green footer */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  /* Explanation section styles */
+  .explanation {
+    margin-top: 20px; /* Add space above the explanation section */
+    text-align: center;
+  }
+  
+  .explanation h3 {
+    color: #008970; /* Green header color */
+    margin-bottom: 10px; /* Add space below the header */
+  }
+  
+  .explanation p {
+    margin-bottom: 20px; /* Add space below paragraphs */
+  }
+  
+  /* Image styles */
+  .explanation img {
+    max-width: 100%; /* Ensure images don't overflow their containers */
+    height: auto;
+    margin-top: 20px; /* Add space above the image */
+  }
+  

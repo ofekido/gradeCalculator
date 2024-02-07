@@ -1,7 +1,6 @@
 /* Header.css */
 .header {
-  background-color: #008970
-  ; /* Blue color */
+  background-color: #008970; 
   color: white;
   padding: 20px;
   display: flex;
