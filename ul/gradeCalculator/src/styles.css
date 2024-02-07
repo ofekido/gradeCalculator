@@ -23,13 +23,14 @@ body {
   flex: 1; /* Make the container flexible to fill remaining space */
   display: flex;
   flex-direction: column;
+  border: 2px solid black; /* Add border around the content */
+  padding: 20px; /* Add padding to the content */
 }
 
 /* Styles for the content area */
 .content {
   flex: 1; /* Make the content area flexible to fill remaining space */
   text-align: center;
-  padding: 20px;
 }
 
 /* Styles for h2 */
@@ -55,4 +56,27 @@ th, td {
 /* Styles for table header cells */
 th {
   background-color: #f5deb3; /* Lighter cream-colored background for table header cells */
+}
+
+/* Styles for the HEADER */
+.Header {
+  border: 2px solid black; /* Add border around the HEADER */
+  padding: 20px; /* Add padding to the HEADER */
+}
+
+/* styles.css */
+
+/* Add styles for the explanation */
+.explanation {
+  text-align: center; /* Center-align the text */
+  margin: 20px auto; /* Center the container horizontally */
+  max-width: 600px; /* Set maximum width for the container */
+}
+
+/* Add styles for the image */
+.explanation img {
+  display: block; /* Ensure the image is displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+  max-width: 100%; /* Set maximum width for the image */
+  height: auto; /* Automatically adjust the height to maintain aspect ratio */
 }
