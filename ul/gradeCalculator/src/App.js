@@ -141,6 +141,8 @@ class App extends Component {
                     />
                     <button onClick={() => this.addGrade()}>Add Grade</button>
                 </div>
+                {/* Add a space between the table and the dropdown */}
+                <div style={{ marginBottom: '20px' }}></div>
                 <div>
                     <select value={selectedStudent} onChange={e => this.setState({ selectedStudent: e.target.value })}>
                         <option value="">Select Student</option>
@@ -148,29 +150,32 @@ class App extends Component {
                     </select>
                     <button onClick={() => this.calculateGrade()}>Calculate</button>
                 </div>
-                {/* Table to display grades */}
-                <table className="grades-table">
-                    <thead>
-                        <tr>
-                            <th>Student Name</th>
-                            <th>Profession</th>
-                            <th>Grade</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {grades.map((grade, index) => (
-                            <tr key={index}>
-                                <td>{grade.studentName}</td>
-                                <td>{grade.profession}</td>
-                                <td>{grade.grade}</td>
-                                <td>
-                                    <button onClick={() => this.deleteGrade(grade._id)}>Delete</button>
-                                </td>
+                {/* Apply the table-container class to the wrapping div */}
+                <div className="table-container">
+                    {/* Table to display grades */}
+                    <table className="grades-table">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>Profession</th>
+                                <th>Grade</th>
+                                <th>Action</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {grades.map((grade, index) => (
+                                <tr key={index}>
+                                    <td>{grade.studentName}</td>
+                                    <td>{grade.profession}</td>
+                                    <td>{grade.grade}</td>
+                                    <td>
+                                        <button onClick={() => this.deleteGrade(grade._id)}>Delete</button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
                 <Footer /> {/* Include the Footer component */}
             </div>
         );

@@ -1,11 +1,12 @@
 /* Header.css */
 .header {
-    background-color: darkblue;
-    color: white;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-  }
+  background-color: #008970
+  ; /* Blue color */
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
   
   .logo {
     width: 100px; /* Adjust the width as needed */

@@ -1,10 +1,10 @@
 /* Footer.css */
 .footer {
-  position: fixed; /* Fixed position to stick to the bottom */
-  bottom: 0; /* Stick to the bottom of the viewport */
+  position: fixed;
+  bottom: 0;
   left: 0;
-  width: 100%; /* Make the footer span the entire width */
-  background-color: darkgreen;
+  width: 100%;
+  background-color: #008970; /* Blue color */
   color: white;
   padding: 10px;
   text-align: center;

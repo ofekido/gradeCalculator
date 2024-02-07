@@ -2,20 +2,62 @@
 
 /* Set body styles */
 body {
-  background-color: #afe1c2; /* Green color */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
-  font-family: 'Arial', sans-serif; /* Set a default font */
+  background-color: #99eedf; /* Green color */
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Ensure that the body takes up at least the full viewport height */
+  min-height: 100vh;
 }
+
 
 /* Style for the main content area */
 .App {
   text-align: center;
   flex: 1; /* Make the main content area flexible to fill remaining space */
   overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #008970; /* Blue color */
+}
+
+.error-message {
+  color: #dc3545; /* Red color */
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #008970  ; /* Blue color */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #008970  ; /* Darker blue color on hover */
+}
+
+/* Button icon styles */
+.button-icon {
+  margin-right: 5px;
 }
 
 /* Styles for the container of average grade page */
@@ -33,8 +75,6 @@ body {
   text-align: center;
 }
 
-/* styles.css */
-
 /* Add styles to increase text size inside the content container */
 .content p {
   font-size: 45px; /* Set the desired font size */
@@ -45,45 +85,46 @@ h2 {
   color: #ffffff; /* White text color */
 }
 
-/* Styles for the table */
+/* Styles for the table container */
+/* Table container styles */
+.table-container {
+  max-height: 400px;
+  overflow-y: auto;
+  border: 2px solid #008970; /* Blue color */
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 20px; /* Add margin-top to move the table down */
+  margin-bottom: 20px; /* Add margin-bottom for spacing */
+}
+
+
+/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
-  border: 2px solid black; /* Black border around the table */
 }
 
 /* Styles for table cells */
-th, td {
-  padding: 8px;
+th,
+td {
+  padding: 12px; /* Adjust padding for better spacing */
+  border: 1px solid #dee2e6; /* Light gray border */
   text-align: center;
-  border: 1px solid black; /* Black border for table cells */
-  background-color: #fffdd0; /* Cream-colored background for table cells */
+  font-size: 16px; /* Enlarge the text size */
+  font-weight: bold; /* Add bold font weight for emphasis */
 }
 
 /* Styles for table header cells */
 th {
-  background-color: #f5deb3; /* Lighter cream-colored background for table header cells */
+  background-color: #008970; /* Blue color */
+  color: white;
 }
 
-/* Styles for the HEADER */
-.Header {
-  border: 2px solid black; /* Add border around the HEADER */
-  padding: 20px; /* Add padding to the HEADER */
+
+tr:nth-child(even) {
+  background-color: #f8f9fa; /* Light gray background for even rows */
 }
 
-/* styles.css */
-
-/* Add styles for the explanation */
-.explanation {
-  text-align: center; /* Center-align the text */
-  margin: 20px auto; /* Center the container horizontally */
-  max-width: 600px; /* Set maximum width for the container */
-}
-
-/* Add styles for the image */
-.explanation img {
-  display: block; /* Ensure the image is displayed as a block element */
-  margin: 0 auto; /* Center the image horizontally */
-  max-width: 100%; /* Set maximum width for the image */
-  height: auto; /* Automatically adjust the height to maintain aspect ratio */
+tr:hover {
+  background-color: #e9ecef; /* Light gray background on hover */
 }
