@@ -28,7 +28,7 @@ const AverageGrade = () => {
             <div className="explanation">
                 <h3>How to Calculate Grade Average</h3>
                 <p>To calculate the grade average, you add up all the grades and then divide the sum by the number of grades. This method is similar to calculating any other type of average.</p>
-                <img src={averageFormula} alt="Explanation Image" />
+                <img src={averageFormula} alt="Average Formula Illustration" />
             </div>
         </div>
     );
