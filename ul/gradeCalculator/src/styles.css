@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* Set body styles */
 body {
   background-color: #99eedf; 
   margin: 0;
@@ -12,11 +10,11 @@ body {
 }
 
 
-/* Style for the main content area */
+
 .App {
   text-align: center;
-  flex: 1; /* Make the main content area flexible to fill remaining space */
-  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  flex: 1; 
+  overflow-y: auto; 
 }
 
 input[type="text"],
@@ -40,7 +38,6 @@ input[type="number"]:focus {
   margin-top: 5px;
 }
 
-/* Button styles */
 button {
   padding: 10px 20px;
   border: none;
@@ -55,66 +52,57 @@ button:hover {
   background-color: #008970  ; 
 }
 
-/* Button icon styles */
 .button-icon {
   margin-right: 5px;
 }
 
-/* Styles for the container of average grade page */
 .average-grade-container {
-  flex: 1; /* Make the container flexible to fill remaining space */
+  flex: 1; 
   display: flex;
   flex-direction: column;
-  border: 2px solid black; /* Add border around the content */
-  padding: 20px; /* Add padding to the content */
+  border: 2px solid black; 
+  padding: 20px; 
 }
 
-/* Styles for the content area */
 .content {
-  flex: 1; /* Make the content area flexible to fill remaining space */
+  flex: 1; 
   text-align: center;
 }
 
-/* Add styles to increase text size inside the content container */
 .content p {
-  font-size: 45px; /* Set the desired font size */
+  font-size: 45px; 
 }
 
-/* Styles for h2 */
 h2 {
-  color: #ffffff; /* White text color */
+  color: #ffffff; 
 }
 
-/* Styles for the table container */
-/* Table container styles */
+
 .table-container {
   max-height: 400px;
   overflow-y: auto;
   border: 2px solid #008970; 
   border-radius: 10px;
   padding: 10px;
-  margin-top: 20px; /* Add margin-top to move the table down */
-  margin-bottom: 20px; /* Add margin-bottom for spacing */
+  margin-top: 20px; 
+  margin-bottom: 20px; 
 }
 
 
-/* Table styles */
 table {
   width: 100%;
   border-collapse: collapse;
 }
 
-/* Styles for table cells */
 th,
 td {
-  padding: 12px; /* Adjust padding for better spacing */
-  border: 1px solid #dee2e6; /* Light gray border */
+  padding: 12px; 
+  border: 1px solid #dee2e6; 
   text-align: center;
-  font-size: 16px; /* Enlarge the text size */
-  font-weight: bold; /* Add bold font weight for emphasis */
+  font-size: 16px; 
+  font-weight: bold; 
 }
 
-/* Styles for table header cells */
 th {
   background-color: #008970; 
   color: white;
@@ -122,9 +110,9 @@ th {
 
 
 tr:nth-child(even) {
-  background-color: #f8f9fa; /* Light gray background for even rows */
+  background-color: #f8f9fa; 
 }
 
 tr:hover {
-  background-color: #e9ecef; /* Light gray background on hover */
+  background-color: #e9ecef; 
 }
