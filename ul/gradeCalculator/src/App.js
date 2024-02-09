@@ -115,13 +115,13 @@ class App extends Component {
                         type="text"
                         placeholder="Student Name"
                         value={studentName}
-                        onChange={e => this.setState({ studentName: e.target.value.slice(0, 30) })} 
+                        onChange={e => this.setState({ studentName: e.target.value.slice(0, 30).toLowerCase() })} 
                     />
                     <input
                         type="text"
                         placeholder="Profession"
                         value={profession}
-                        onChange={e => this.setState({ profession: e.target.value.slice(0, 30) })}
+                        onChange={e => this.setState({ profession: e.target.value.slice(0, 30).toLowerCase() })}
                     />
                     <input
                         type="text"  
