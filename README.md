@@ -48,7 +48,7 @@ Downlaod and install nodejs from nodejs.org
 
 Navigate to your render.com dashboard and create a new web service. Choose your GitHub repository and select the branch you want to deploy.
 
-## client experience
+## Client Experience
 Usage Add new grades by entering student name, profession, and grade in the input fields and clicking the "Add Grade" button. Delete grades by clicking the "Delete" button next to the grade. Calculate the average grade for a selected student by choosing the student from the dropdown menu and clicking the "Calculate" button.
 
 
