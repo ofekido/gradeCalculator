@@ -30,7 +30,7 @@ Downlaod and install nodejs from nodejs.org
    cd ../api
    npm install
    ```
-3.**Install dependencies for the client:**
+3. **Install dependencies for the client:**
    ```bash
    cd ../gradeCalculator
    npm install
