@@ -46,21 +46,10 @@ Downlaod and install nodejs from nodejs.org
 
 ## Deploy the server:
 
-   Navigate to your render.com dashboard and create a new web service.
-   Choose your GitHub repository and select the branch you want to deploy.
-   Set the environment variables, including the MongoDB connection string.
-   Deploy the service.
-   Deploy the client:
-   
-   Follow the same steps as above, but deploy the client directory instead.
-   Set the environment variable REACT_APP_API_URL to the URL of your server deployed on render.com.
-   Usage
-   Add new grades by entering student name, profession, and grade in the input fields and clicking the "Add Grade" button.
-   Delete grades by clicking the "Delete" button next to the grade.
-   Calculate the average grade for a selected student by choosing the student from the dropdown menu and clicking the "Calculate" button.
-   Contributing
-Contributions are welcome! If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+Navigate to your render.com dashboard and create a new web service. Choose your GitHub repository and select the branch you want to deploy.
 
-Acknowledgments
-Thanks to MongoDB for providing the database infrastructure.
-Thanks to React and Express.js for the frontend and backend frameworks.
+## client experience
+Usage Add new grades by entering student name, profession, and grade in the input fields and clicking the "Add Grade" button. Delete grades by clicking the "Delete" button next to the grade. Calculate the average grade for a selected student by choosing the student from the dropdown menu and clicking the "Calculate" button.
+
+
+
